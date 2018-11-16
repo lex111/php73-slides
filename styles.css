@@ -16,9 +16,11 @@ pre code {
 }
 .slide h2 code {
     font-size: 38px;
+    margin: 0;
 }
 .slide li code {
     font-size: 23px;
+    margin: 0;
 }
 .slide pre mark.important {
     margin: 0;
