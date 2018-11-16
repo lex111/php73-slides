@@ -1,200 +1,1049 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Что нового нас ждёт в PHP 7.3+</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
-    </style>
+    <link rel="stylesheet" href="vendor/highlight.js/default.min.css">
+    <link rel="stylesheet" href="vendor/icomoon/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Новинки PHP 7.3 и планы на будущее</h1>
+        <p>@<strong>lex111</strong></p>
     </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+    <section class="slide" id="intro">
+        <h2>Что нового нас ожидает в PHP 7.3 и не только</h2>
+
+        <div class="bottom-panel">
+            <div class="author-info">
+                <a target="_blank" href="https://github.com/lex111">
+                    <img class="author-info-avatar" src="pictures/avatar.png" alt="lex111">
+                    <strong>lex111</strong>
+                </a>
+            </div>
+
+            <span class="date">18.11.18, Харьков 🇺🇦</span>
+
+            <a target="_blank" href="https://www.meetup.com/ru-RU/thinkphp/events/255935678/" class="logo">
+                <img src="pictures/thinkphp_logo.png" alt="think-php-logo">
+            </a>
+        </div>
+
         <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
+            <img class="cover cover-main cover-full" src="pictures/intro.jpg" alt="">
+            <figcaption class="copyright">© Ulf Wendel</figcaption>
         </figure>
-        <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
-
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
-
-            #cover p a {
-                color: white;
-            }
-        </style>
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+        <h2>Статистика использования версий PHP 😊</h2>
+
+        <figure>
+            <img class="media media-no-mh" src="pictures/php-versions-packagist.png" alt="">
+            <figcaption><a href="https://blog.packagist.com/php-versions-stats-2018-2-edition/">Источник: packagist.com</a></figcaption>
+        </figure>
     </section>
 
     <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Ещё одна статистика использования PHP 😞</h2>
+        <!-- <h3>Проанализированы топ миллион сайтов</h3> -->
+
+        <figure>
+            <img class="media media-no-mh" src="pictures/phpvatch.png" alt="" style="width: 80%;">
+            <figcaption><a href="https://xposedornot.com/phpvatch/summary">Источник: xposedornot.com</a></figcaption>
+        </figure>
     </section>
 
     <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        <h2>Даты поддержки релизов PHP</h2>
+
+        <figure>
+            <img class="media media-no-mh" src="pictures/releases.png" alt="">
+            <img class="media media-no-mh" src="http://php.net/images/supported-versions.php">
+
+            <figcaption><a href="http://php.net/supported-versions.php">Источник: php.net</a></figcaption>
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">
+            <a href="https://upgradeyourphp.com/">Обнови свой <br> PHP! 🐘</a>
+        </h2>
+
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">PHP 7.3: новые возможности</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
+
+        <!-- Раньше были строгие правила: - закрывающий идентификатор не должен иметь символов табуляции или пробелов  -->
+
+        <div class="columns two compare-columns">
+            <div>
+                <pre><code class="php">class Example {
+  public $markup = &lt;&lt;&lt;HTML
+    &lt;details&gt;
+    &lt;summary&gt;Спойлер&lt;/summary&gt;
+    &lt;p&gt;Убийца — дворецкий!&lt;/p&gt;
+    &lt;/details&gt;
+  HTML;
+}</code></pre>
+            </div>
+
+            <div>
+                <pre><code class="php">class Example {
+  public $markup = &lt;&lt;&lt;HTML
+  &lt;details&gt;
+    &lt;summary&gt;Спойлер&lt;/summary&gt;
+    &lt;p&gt;Убийца — дворецкий!&lt;/p&gt;
+  &lt;/details&gt;
+HTML;}</code></pre>
+            </div>
         </div>
     </section>
 
     <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
+        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
+
+        <div class="columns two">
+            <div>
+                <pre><code class="php">echo &lt;&lt;&lt;END
+      a
+     b
+    c
+    END;
+/*
+  a
+ b
+c
+*/</code></pre>
+            </div>
+
+            <div>
                 <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
+                    <li>Ровно такой же отступ, как у закрывающего идентификатора, будет удален в каждой строке текста</li>
+                    <li>Если число отступов, используемых в закрывающем идентификаторе превышает число символов отступов в самой строке, будет ошибка <mark class="imporant">Parse error: Invalid body indentation level</mark></li>
                 </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Serious citations</h2>
+        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
+
+        <pre><code class="php">$str = &lt;&lt;&lt;HELLO
+  HELLO_WORLD
+  HELLOWORLD
+  HELLO WORLD <-- ↘️ вызовёт ошибку из-за этого
+HELLO;
+<mark class="important">Parse error: syntax error, unexpected 'WORLD' (T_STRING) in</mark></code></pre>
+
+        <!-- <a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Поддержка завершающих запятых в списке аргументов при вызове функций (<a href="https://wiki.php.net/rfc/trailing-comma-function-calls">RFC</a>)</h2>
+
+        <pre><code class="php">$newArray = array_merge(
+  $arrayOne,
+  ['foo', 'bar']<mark>,</mark>
+);
+function bar($a, $b<mark>,</mark>) { } // Parse error
+foo(<mark>,</mark>); // Parse error
+baz('function', 'bar',<mark>,</mark>); // Parse error
+foo(<mark>,</mark> 'function', 'bar'); // Parse error
+</code></pre>
+
+        <!-- <a href="https://wiki.php.net/rfc/trailing-comma-function-calls">Ссылка на RFC</a> -->
+    </section>
+
+<!--
+    <div class="columns two compare-columns">
+        <div>
+            <pre><code class="php">
+
+            </code></pre>
+        </div>
+        <div>
+            <pre><code class="php">
+
+            </code></pre>
+        </div>
+    </div>
+ -->
+
+    <section class="slide">
+        <h2>Исключения при работе с JSON (<a href="https://wiki.php.net/rfc/json_throw_on_error">RFC</a>)</h2>
+
+        <div class="columns two compare-columns compare-columns-row">
+            <div>
+                <pre><code class="php">json_decode(&quot;{&quot;, false, 512);
+if (json_last_error() !== JSON_ERROR_NONE) {
+    echo json_last_error_msg();
+    echo json_last_error();
+}</code></pre>
+            </div>
+
+            <div>
+                <pre><code class="php">try {
+    json_decode(&quot;{&quot;, false, 512, <mark>JSON_THROW_ON_ERROR</mark>);
+} catch (<mark>\JsonException</mark> $exception) {
+    echo $e-&gt;getMessage(); // то же что и json_last_error_msg()
+    echo $e-&gt;getCode(); // то же что и json_last_error()
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/json_throw_on_error">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Присваивание по ссылкам в list (<a href="https://wiki.php.net/rfc/list_reference_assignment">RFC</a>)</h2>
+
+        <div>
+            <pre><code class="php">$arr = [1, 2]; // [] - сокращенная форма list (c PHP 7.1)
+[$a, &$b] = $arr;
+$arr[1] = 3;
+echo $b;</code></pre>
+        </div>
+
+        <p>
+            <br>
+            Вывод кода: <br>
+            Раньше — <mark class="important">Fatal error: [] and list() assignments cannot be by reference</mark> ❌
+            Теперь — 3 ✔️
+            <br>
+            ➕ Работает также с вложенными списками
+        </p>
+
+        <!-- <a href="https://wiki.php.net/rfc/list_reference_assignment">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Cookies с атрибутом SameSite (<a href="https://wiki.php.net/rfc/same-site-cookie">RFC</a>)</h2>
+
+        <ul>
+            <li>В функциях <code>setcookie()</code>, <code>setrawcookie()</code>, <code>session_set_cookie_params()</code> атрибут задаётся через массив опций</li>
+            <li>В функции <code>session_get_cookie_params</code> появляется ключ <code>samesite</code></li>
+            <li>Samesite должен быть задан одним из двух значений: Strict или Lax</li>
+            <li>Также добавляется INI-опция <code>session.cookie_samesite</code></li>
+        </ul>
+
+         <!-- cookie не нужно передавать, если запрос идет с сайта, отличного от того, на котором cookie была установлена -->
+        <!-- strict - приложение не будет отправлять куки ни на один запрос с другого ресурса -->
+        <!-- lax - куки передают запросам через безопасные методы - GET, HEAD, OPTIONS и TRACE -->
+        <!-- <a href="https://habr.com/post/334856/">Конец CSRF близок?</a> -->
+
+        <pre><code class="php">setcookie('cookie_name', 'cookie_value', [
+    'expire' =&gt; strtotime('+7 days'),
+    <mark>'samesite' =&gt; 'Strict',</mark>
+]);</code></pre>
+
+        <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00">Черновик по SameSite 🔗</a>
+
+        <!-- <a href="https://wiki.php.net/rfc/same-site-cookie">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Добавление поддержки Argon2id (<a href="https://wiki.php.net/rfc/argon2_password_hash_enhancements">RFC</a>)</h2>
+
+        <ul>
+            <li>Есть три разных варианта: Argon2i (уже реализован), Argon2d и Argon2id</li>
+            <li>❌ Argon2d быстрее первого, но использует данные, зависящие от памяти</li>
+            <li>✔️ Argon2i — гибридная версия двух перечисленных, использует независимый от данных доступ к памяти</li>
+        </ul>
+
+        <pre><code class="php">password_hash('123456', PASSWORD_ARGON2ID);</code></pre>
+
+        <br>
+
+        <p>➕  Поддерживает те же самые опции, что и Argon2i: <code>memory_cost</code>, <code>time_cost</code>, <code>threads</code></p>
+
+        <!-- <a href="https://wiki.php.net/rfc/argon2_password_hash_enhancements">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Улучшенный сборщик мусора</h2>
+
+        <ul>
+            <li>Ранее был лимит на хранение 10 тысяч значений в сборщике мусора, теперь это значение динамически увеличивается, по мере необходимости</li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+        <h2>Обновление SQLite до версии 3.24</h2>
+
+        <ul>
+            <li>Поддержка UPSERT: то же самое, что и SELECT, но если строка уже существует, то вставка преобразуется в команду UPDATE</li>
+        </ul>
+
+        <pre><code class="sql">CREATE TABLE vocabulary(word TEXT PRIMARY KEY, count INT DEFAULT 1);
+INSERT INTO vocabulary(word) VALUES('jovial')
+  ON CONFLICT(word) DO UPDATE SET count=count+1;</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Новые возможности PHP 7.3: остальное</h2>
+
+        <ul>
+            <li>Оператор <code>instanceof</code> теперь принимает строку в качестве первого операнда, в этом случае всегда возвращается <code>false</code></li>
+            <li>Новое исключение <code>CompileError</code></li>
+        </ul>
+
+    </section>
+
+    <!-- <section class="slide">
+        <h2></h2>
+
+    </section>
+
+    <section class="slide">
+        <h2></h2>
+
+    </section> -->
+
+    <section class="slide">
+        <h2 class="shout">PHP 7.3: новые функции</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Новая функция <code>is_countable()</code> (<a href="https://wiki.php.net/rfc/is-countable">RFC</a>)</h2>
+
+        <div class="columns two compare-columns compare-columns-row">
+            <div>
+                <pre><code class="php">if (is_array($foo) || $foo instanceof Countable) {
+    // счётное значение в переменной $foo
+}</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">if (is_countable($foo)) {
+    // счётное значение в переменной $foo
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/is-countable">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Новая функция <code>array_key_first()</code> (<a href="https://wiki.php.net/rfc/array_key_first_last">RFC</a>)</h2>
+
+        <div class="columns two compare-columns">
+            <div>
+                <pre><code class="php">// Получение первого ключа
+reset($items);
+$firstKey = key($items);
+
+// Альтернативный вариант (лучше)
+// (без изменения внут. указателя)
+foreach ($array as $key => $value) {
+    return $key;
+}</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">// Получение первого ключа
+$firstKey = array_key_first();</code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/array_key_first_last">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Новая функция <code>array_key_last()</code> (<a href="https://wiki.php.net/rfc/array_key_first_last">RFC</a>)</h2>
+
+        <div class="columns two compare-columns">
+            <div>
+                <pre><code class="php">// Получение последнего ключа
+end($items);
+$lastKey = key($items);</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">// Получение последнего ключа
+$lastKey = array_key_last($items);
+                </code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/array_key_first_last">Ссылка на RFC</a> -->
+
+        <br>
+
+        <p class="next">А могло быть ещё две функции: <code>array_value_first()</code> и <code>array_value_last()</code> 😞</p>
+    </section>
+
+    <section class="slide">
+        <h2>Новая функция <code>hrtime()</code></h2>
+         <!-- <li>Используется для гарантированного вычисления временных интервалов</li> -->
+
+        <p>Монотонный таймер, который нельзя как-либо сбросить или подкрутить, не зависит от внутренних часов.
+             Современная версия <code>microtime()</code>.
+            <!-- Похож на <code>microtime()</code>, но очень точен (без каких-либо искажений) -->
+        </p>
+
+        <!-- <ul>
+            <li>Монотонный таймер, который нельзя как-либо сбросить или подкрутить, не зависит от внутренних часов</li>
+            <li>Похож на <code>microtime()</code>, но очень точен (без каких-либо искажений)</li>
+        </ul> -->
+
+        <pre style="font-size: 16px;"><code class="php">echo hrtime(true), PHP_EOL;
+print_r(hrtime());
+/*
+10772172204753701 // большое целое число
+Array
+(
+    [0] => 10772172  // секунды
+    [1] => 204845218 // наносекунды
+)
+*/</code></pre>
+
+        <a href="https://www.softwariness.com/articles/monotonic-clocks-windows-and-posix/">Монотонные часы — правильный способ определять прошедшее время 🔗</a>
+    </section>
+
+    <section class="slide">
+        <h2>Новые функции GMP</h2>
+
+        <ul>
+            <li><code>gmp_binomial</code></li>
+            <li><code>gmp_lcm</code> ❓</li>
+            <li><code>gmp_perfect_power</code> ❓</li>
+            <li><code>gmp_kronecker</code> ❓</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout shout-medium">PHP 7.3: изменения, влияющие на обратную совместимость</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Миграция на с PCRE (8) на PCRE2 (10.x)</h2>
+
+        <ul>
+            <li>Модификатор S включен по умолчанию</li>
+            <li>Опция X отключена по умолчанию</li>
+            <li>Используется Юникод десятой версии</li>
+            <li>Некоторые паттерны регулярных выражений могут быть перестать работать ⚠️</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Миграция на PCRE2 (<a href="https://wiki.php.net/rfc/pcre2-migration">RFC</a>)</h2>
+
+        <p>Пример регулярного выражения, которое не будет работать в PHP 7.3, и как это исправить</p>
+
+        <div class="columns two compare-columns compare-columns-row">
+            <div>
+                <pre><code class="php">preg_match('/[\w<mark>-</mark>.]+/', '');
+// Warning: Compilation failed: invalid range in character class</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">preg_match('/[\w.<mark>-</mark>]+/', '');</code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/pcre2-migration">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Уведомление о неопределённых переменных в <code>compact()</code> (<a href="https://wiki.php.net/rfc/compact">RFC</a>)</h2>
+
+        <div class="columns two compare-columns compare-columns-row">
+            <div>
+                <pre><code class="php">$foo = 'bar';
+$baz = compact('foz'); // ошиблись, вместо `foo` передали `foz`</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">$foo = 'bar';
+$baz = compact('foz'); // ошиблись, вместо `foo` передали `foz`
+
+<mark class="important">Notice: compact(): Undefined variable: foz</mark></code></pre>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- <a href="https://wiki.php.net/rfc/compact">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Объявление и использование регистронезависимых констант (<a href="https://wiki.php.net/rfc/case_insensitive_constant_deprecation">RFC</a>)</h2>
+
+        <div class="columns two compare-columns compare-columns-row">
+            <div>
+                <pre><code class="php">define('CURRENT_VERSION', '7.3', true);
+$result = constant('current_version'); // 7.3
+</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">define('CURRENT_VERSION', '7.3', true);
+$result = constant('current_version'); // 7.3
+<mark class="important">Deprecated: Declaration of case-insensitive constants is deprecated</mark>
+<mark class="important">Deprecated: Case-insensitive constants are deprecated. The correct<br>casing for this constant is "CURRENT_VERSION"</mark></code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/case_insensitive_constant_deprecation">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Определение функции с именем <code>assert</code></h2>
+
+        <pre><code class="php">namespace Example {
+    function assert($string) {
+        echo $string;
+    }
+
+    assert('123');
+}
+<mark class="important">Deprecated: Defining a custom assert() function is deprecated,<br>as the function has special semantics</mark></code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Использование <code>continue</code> в выражениях <code>switch</code></h2>
+
+        <pre><code class="php">while ($foo) {
+    switch ($bar) {
+        case &quot;baz&quot;:
+            continue;
+            // должно быть `break 2`, если хотим выйти из цикла
+    }
+}
+<mark class="important">Warning: "continue" targeting switch is equivalent to "break". <br>Did you mean to use "continue 2"</mark>
+</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Изменения, влияющие на обратную совместимость PHP 7.3: прочее</h2>
+
+        <ul>
+            <li>Если SPL-автозагрузчик выбрасывает исключение, то следующие автозагрузчики выполняться не будут (ранее исключения собирались в цепочку)</li>
+            <li>Функция <code>stream_socket_get_name()</code> теперь возвращает IP-адреса в квадратных скобках (<code>[::1]:1337</code>, ранее — <code>::1:1337</code>)</li>
+        </ul>
+
+    </section>
+
+    <!-- <section class="slide">
+        <h2></h2>
+
+    </section> -->
+
+    <section class="slide">
+        <h2>PHP 7.3: устаревший функционал</h2>
+
+        <ul>
+            <li><a href="https://wiki.php.net/rfc/deprecations_php_7_3#undocumented_mbstring_function_aliases">Удаление недокументированных псевдонимов функций mbstring (например, <code>mbereg</code> вместо <code>mb_ereg</code>)</a></li>
+            <li><a href="https://wiki.php.net/rfc/deprecations_php_7_3#fgetss_function_and_stringstrip_tags_filter">Объявление устаревшими функций <code>fgetss()</code>, <code>gzgetss()</code> и <code>SplFileObject::fgetss()</code>, а также потока <code>string.strip_tags</code></a></li>
+            <li><a href="https://wiki.php.net/rfc/deprecations_php_7_3#filter_flag_scheme_required_and_filter_flag_host_required">Объявление устаревшим использование флагов фильтра <code>FILTER_FLAG_SCHEME_REQUIRED</code> и <code>FILTER_FLAG_HOST_REQUIRED</code></a> из-за наличия <code>FILTER_VALIDATE_URL</code></li>
+            <li>Объявлено устаревшей функции <code>image2wbmp()</code> в пользу <code>imagewbmp()</code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Использование числа в строковых функциях поиска</h2>
+
+        <pre><code class="php">$str = &quot;There are 10 apples&quot;;
+var_dump(strpos($str, &quot;10&quot;)); // int(10)
+var_dump(strpos($str, 10)); // bool(false)
+<mark class="important">Deprecated: strpos(): Non-string needles will be interpreted as<br>strings in the future. Use an explicit chr() call to preserve the<br>current behavior</mark></code></pre>
+
+        <a href="https://wiki.php.net/rfc/deprecations_php_7_3#string_search_functions_with_integer_needle">Ссылка на раздел RFC</a>
+    </section>
+
+    <section class="slide">
+        <h2></h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>PHP 7.3: прочие изменения</h2>
+
+        <ul>
+            <li>В функции <code>preg_quote</code> теперь экранируется символ "#"</li>
+            <li><code>ParseError</code> наследуется от <code>CompileError</code> вместо <code>Error</code></li>
+            <li>Функции <code>apache_request_headers()</code> и <code>getallheaders</code> стали доступны в FPM</li>
+            <li>Сообщения <code>TypeError</code> теперь выводят корректный тип для целых чисел и булевых значений (<code>int/bool</code> вместо <code>integer/boolean</code>)</li>
+        </ul>
+
+    </section>
+
+    <section class="slide">
+        <h2>Функции <code>array_push()</code> и <code>array_unshift()</code> могут вызываться с одним параметром</h2>
+
+        <p>Сделано для удобства работы с оператором расширения (<code>...</code>), если распаковка массива в итоге пустая (пример ниже)</p>
+
+        <pre><code class="php">$a = [];
+$b = [1,2,3,4];
+array_push($b, ...$a);
+<mark class="important">Warning: array_push() expects at least 2 parameters, 1 given</mark>
+// В PHP 7.3 такого предупреждения не будет</code></pre>
+    </section>
+
+    <!-- <section class="slide">
+        <h2></h2>
+
+    </section> -->
+
+    <section class="slide future-php-slide">
+        <h2>Полезные ссылки про PHP 7.3 🎓</h2>
+
+        <ul>
+            <li><a href="https://github.com/php/php-src/blob/PHP-7.3/NEWS">Список всех изменений</a></li>
+            <li><a href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING">Примечания к обновлению</a></li>
+            <li><a href="https://symfony.com/doc/current/components/polyfill_php73.html">Полифил для PHP 7.3 (новые функции)</a></li>
+            <li><a href="https://wiki.php.net/todo/php73">Расписание выхода релизов PHP 7.3</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">А что известно<br>про PHP 7.4?</h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+        <div class="columns two compare-columns">
+            <div>
+                <pre style="font-size: 11px;"><code class="php">class User {
+    /** @var int $id */
+    private $id;
+    /** @var string $name */
+    private $name;
+
+    public function __construct(int $id, string $name) {
+        $this-&gt;id = $id;
+        $this-&gt;name = $name;
+    }
+
+    public function getId(): int {
+        return $this-&gt;id;
+    }
+    public function setId(int $id): void {
+        $this-&gt;id = $id;
+    }
+
+    public function getName(): string {
+        return $this-&gt;name;
+    }
+    public function setName(string $name): void {
+        $this-&gt;name = $name;
+    }
+}</code></pre>
+            </div>
+            <div>
+                <pre style="font-size: 11px;"><code class="php">class User {
+    public int $id;
+    public string $name;
+
+    public function __construct(int $id, string $name) {
+        $this->id = $id;
+        $this->name = $name;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+        <pre style="font-size: 12px;"><code class="php">class Example {
+    // Поддерживаются все типы, за исключением &quot;void&quot; и &quot;callable&quot;
+    public int $scalarType;
+    protected ClassName $classType;
+    private ?ClassName $nullableClassType;
+
+    // Также возможно типизировать статические свойства
+    public static iterable $staticProp;
+
+    // Типы можно использовать с нотацией &quot;var&quot;
+    var bool $flag;
+
+    // Типизированные свойства могут иметь значения по умолчанию
+    public string $str = &quot;foo&quot;;
+    public ?string $nullableStr = null;
+
+    // Одновременно можно типизировать несколько свойств
+    public float $x, $y;
+    // то же самое, что и выше:
+    public float $x;
+    public float $y;
+}</code></pre>
+
+    </section>
+
+    <!-- <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+    </section> -->
+
+    <section class="slide">
+        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+
+        <mark>14 ноября принято в PHP 7.4</mark>
+
+        <!-- <p>Идея — загружать PHP-скрипты при старте PHP; функции и классы, определённые в них, будут доступны всем запросам без всяких include/require. По сути, это даёт возможность писать стандартные библиотеки на PHP</p> -->
+
+        <blockquote>
+            <p>При запуске сервера (до того, как будет выполнен запуск любого кода приложения) появляется возможность загрузить определенный набор PHP-файлов. Все сущности, определенные в этих файлах, будут автоматически доступны каждому запросу, словно они уже есть в PHP, т.е. <strong>предварительно загружены</strong>.</p>
+        </blockquote>
+
+        <p>Может быть использована для загрузки «стандартных» функций, классов, констант</p>
+
+        <!-- <a href="https://wiki.php.net/rfc/preload">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+
+        <ul>
+            <li value="+">Реализована как часть Opcache, файл с предварительной загрузкой указывается в опции <code>opcache.preload</code></li>
+            <li value="+">В функции <code>opcache_get_status()</code> появляется ключ <code>preload_statistics</code>, содержащий данные обо всех предзагруженных функциях и классов</li>
+        </ul>
+
+        <ul>
+            <li value="-">Невозможность обновления предварительно загруженных файлов, для этого потребуется только перезапуск сервера — они сохраняются в памяти опкеша навсегда</li>
+            <li value="-">Не подходит для серверов, на которых есть несколько приложений (из-за того, что будут определенные классы под одним и тем же именем) — может привести к сбоям</li>
+        </ul>
+
+        <a href="https://wiki.php.net/rfc/preload">Ссылка на RFC</a>
+    </section>
+
+    <section class="slide">
+        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+
+         <div class="columns two">
+             <div>
+                <ul>
+                    <li>
+                        Первый запроc: <br>
+                        - Сохранение вызовов к автозагрузчику <br>
+                        - Компиляция в опкод <br>
+                        - Сохранение в кеш опкода
+                    </li>
+                    <li>
+                        Второй запрос: <br>
+                        - Сохранение вызовов к автозагрузчику <br>
+                        - Получение «данных» из кеша опкода
+                    </li>
+                </ul>
+             </div>
+             <div>
+                 <ul>
+                     <li>Процесс PHP запускается при старте сервера</li>
+                     <li>Начинает работать предзагрузка: компиляция в опкоды и сохранение в памяти (<strong>не в кеше</strong>)</li>
+                     <li>Первые и последующие запросы просто выполняют сохраненные опкоды</li>
+                 </ul>
+             </div>
+         </div>
+    </section>
+
+    <section class="slide">
+        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+
+        <pre><code class="bash">php <mark>-d opcache.preload=preload.php</mark> test.php</code></pre>
+
+        <div class="columns two">
+            <div>
+                <pre style="font-size: 12px;"><code class="php">// example.php
+class Example {
+    public function __construct() {
+        echo 'Класс Example';
+    }
+}
+function example() {
+    echo 'Функция example';
+}
+
+// preload.php
+function preload($filename) {
+    opcache_compile_file($filename);
+}
+preload(&quot;example.php&quot;);
+
+// test.php
+new Example; // Класс Example
+example(); // Функция example
+print_r(opcache_get_status()); // Фрагмент справа</code></pre>
+            </div>
+            <div>
+                <pre style="font-size: 12px;"><code class="php">// ...
+    [preload_statistics] =&gt; Array
+    (
+        [memory_consumption] =&gt; 2736
+        <mark>[functions]</mark> =&gt; Array
+            (
+                [0] =&gt; example
+                [1] =&gt; preload
+            )
+        <mark>[classes]</mark> =&gt; Array
+            (
+                [0] =&gt; Example
+            )
+        [scripts] =&gt; Array
+            (
+                [0] =&gt; /home/lex/php74/preload.php
+                [1] =&gt; /home/lex/php74/example.php
+            )
+    )
+// ...</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Реестр хеширования пароля (<a href="https://wiki.php.net/rfc/password_registry">RFC</a>)</h2>
+
+        <ul>
+            <li>Возможность расширений регистрировать свои алгоритмы хеширования паролей</li>
+            <li>Новая функция <code>password_algos()</code> со списком всех зарег. алгоритмов</li>
+            <li>Идентификаторы алгоритмы становятся строками, а не числами, как сейчас (но использование констант вроде <code>PASSWORD_BCRYPT</code> по-прежнему будет работать). При этом <code>PASSWORD_DEFAULT</code> равняется <code>null</code></li>
+            <li>В целях обратной совместимости, добавлена поддержка целочисленных констант (0-3)</li>
+        </ul>
+
+        <!-- <a href="https://wiki.php.net/rfc/password_registry">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Оператор расширения в массиве (<a href="https://wiki.php.net/rfc/spread_operator_for_array">RFC</a>) ❓</h2>
+
+        <pre><code class="php">$parts = ['apple', 'pear'];
+$fruits = ['banana', 'orange', ...$parts, 'watermelon'];
+// ['banana', 'orange', 'apple', 'pear', 'watermelon'];
+
+$arr1 = [1, 2, 3];
+$arr2 = [...$arr1]; // [1, 2, 3]
+$arr3 = [0, ...$arr1]; // [0, 1, 2, 3]
+$arr4 = array(...$arr1, ...$arr2, 111);
+// [1, 2, 3, 1, 2, 3, 111]</code></pre>
+
+        <!-- <a href="https://wiki.php.net/rfc/spread_operator_for_array">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Расширение hash — часть ядра (<a href="https://wiki.php.net/rfc/permanent_hash_ext">RFC</a>)</h2>
+
+        <ul>
+            <li>Теперь оно будет всегда доступно и не может быть отключено</li>
+            <li value="+">Вследствие этого можно удалить проверки <code>extension_loaded('hash')</code></li>
+            <li value="−">Немного станет больше занимать места минимальная сборка PHP</li>
+        </ul>
+
+        <!-- <a href="https://wiki.php.net/rfc/permanent_hash_ext">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>PHP 7.4: остальные изменения</h2>
+
+        <ul>
+            <li>Выбрасывание исключения в <code>openssl_random_pseudo_bytes()</code> и удаление второго параметра (в PHP 8.0) — <a href="https://wiki.php.net/rfc/improve-openssl-random-pseudo-bytes">RFC</a></li>
+            <li>Включение по умолчанию опции <code>session.use_strict_mode</code> — <a href="https://wiki.php.net/rfc/default-session-strict-mode">RFC</a> ❓</li>
+            <li>Для работы расширения SQLite3 потребуется libsqlite версии 3.5.0 или новее (ранее могла использоваться библиотека, включённая в сборку, теперь она была убрана из ядра)</li>
+            <li>Для работы расширения intl требуется ICU 50.1 или новее</li>
+            <li>Добавлены новые константы в Tidy для элементов HTML5</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>PHP 7.4: устаревший функционал</h2>
+
+        <ul>
+            <li>Магическая константа <code>__CLASS__</code> в пользу <code>self::class</code></li>
+            <li>Функция <code>get_called_class()</code> в пользу <code>static::class</code></li>
+            <li>PHP-директивы <code>enable_dl</code>, <code>register_argc_argv</code>, <code>allow_url_include</code></li>
+            <li>Приведение типа <code>(real)</code> и функция <code>is_real()</code></li>
+            <li>Функции <code>get_magic_quotes_gpc()</code> и <code>get_magic_quotes_runtime()</code>, поскольку с 5.4 всегда возвращают <code>false</code></li>
+            <li>Использование объекта в функции <code>array_key_exists()</code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>PHP 7.4: устаревший функционал</h2>
+
+        <ul>
+            <li>Удаление констант фильтра: <code>FILTER_SANITIZE_MAGIC_QUOTES</code>, <code>INPUT_SESSION</code>, <code>INPUT_REQUEST</code></li>
+            <li>Функции <code>hebrev()</code> и <code>hebrevc()</code>, поскольку браузеры уже правильно поддерживают направление текста через атрибут <code>dir</code></li>
+            <li>Функция <code>apache_request_headers()</code> в пользу использования <code>getallheaders()</code></li>
+            <li>Метод <code>export()</code> интерфейса <code>Reflector</code> в пользу использования конструктора/приведения к строке</li>
+            <li>Унификация порядка аргументов в <code>implode()</code> (в соответствии с <code>explode()</code></li>
+        </ul>
+
+        <a href="https://wiki.php.net/rfc/deprecations_php_7_4">Полный список в RFC</a>
+    </section>
+
+    <section class="slide future-php-slide">
+        <h2>Полезные ссылки про PHP 7.4 🎓</h2>
+
+        <ul>
+            <li><a href="https://github.com/php/php-src/blob/master/NEWS">Все изменения</a></li>
+            <li><a href="https://github.com/php/php-src/blob/master/UPGRADING">Примечания при обновлении</a></li>
+            <li><a href="https://github.com/devilbox/docker-php-fpm-7.4">Docker-образ с PHP 7.4 (на данный момент master-ветка PHP)</a></li>
+        </ul>
+    </section>
+
+    <section class="slide future-php-slide">
         <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
-
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
+            <img src="pictures/future_php.png" class="cover" alt="">
+            <figcaption class="copyright">
+                <a href="http://zsuraski.blogspot.com/2018/10/the-future-of-zend-engine-and-zend.html"> zsuraski.blogspot.com</a>
             </figcaption>
         </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
+    </section>
+
+    <section class="slide future-php-slide">
+        <h2>Что будет дальше с будущем PHP?</h2>
+
+        <p>Спойлер — всё будет хорошо!</p>
+
+        <p>PHP — опенсорс-проект, и благодаря его <a href="http://www.zend.com/license/2_00.txt">«либеральной лицензии»</a>, нет никакого риска, что это изменится. Вкратце, никто — ни коммерческая компания или кто-либо ещё — не может «закрыть PHP» или начать взимать с него деньги</p>
+
+        <ul>
+            <li><a href="https://externals.io/message/88702">Больше подробностей в обсуждении</a></li>
+        </ul>
+
+        <figure>
+            <img src="pictures/future_php.png" class="cover cover-blurred" alt="">
+            <figcaption class="copyright">
+                <a href="http://zsuraski.blogspot.com/2018/10/the-future-of-zend-engine-and-zend.html"> zsuraski.blogspot.com</a>
+            </figcaption>
+        </figure>
+
     </section>
 
     <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
+        <h2 class="shout">Планы на PHP 8</h2>
     </section>
 
     <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        <h2>Планы на PHP 8: самое важное ⁉️</h2>
+
+        <ul>
+            <li>Полнофункциональный JIT для ускорения на интенсивных рабочих нагрузок <i>(на обычных прирост несущественен)</i></li>
+            <li>OPcache станет частью ядра вместо отдельного расширения</li>
+            <li><a href="https://github.com/dstogov/php-ffi">FFI (Foreign Function Interface</a>), позволяющий PHP взаимодействовать с нативными библиотеками кода на С или С++ без необходимости написания расширения</li>
+            <li>Улучшенная поддержка асинхронности: больше поддержки асинхронного ввода-вывода в различных расширениях и потоках</li>
+        </ul>
     </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+    <section class="slide">
+        <h2>Планы на PHP 8: что будет удалено</h2>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
+        <ul>
+            <li>Устаревшие конструкторы (методы с названием класса)</li>
+            <li>Неопределенные константы как строки (<code>echo FOO;</code>)</li>
+            <li>Удаление функции <code>__autoload()</code> (устарела с PHP 7.2)</li>
+            <li>Удаление функции <code>create_function()</code></li>
+            <li>Удаление функции <code>each()</code></li>
+            <li>Запрет вызова <code>parse_str()</code> без второго параметра</li>
+            <li>Определение собственной соли в функции <code>password_hash()</code></li>
+            <li>Приведение типа <code>(unset)</code> (т.к. просто устанавливает значение <code>null</code>)</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Массивы, начинающиеся с отрицательного индекса (<a href="https://wiki.php.net/rfc/negative_array_index">RFC</a>)</h2>
+
+        <pre><code class="php">$result = [-2 =&gt; true, true, true];
+var_dump($result);</code></pre>
+
+        <div class="columns two compare-columns">
+            <div>
+                <pre><code class="php">array(3) {
+  [-2]=&gt;
+  bool(true)
+  [0]=&gt;
+  bool(true)
+  [1]=&gt;
+  bool(true)
+}</code></pre>
+            </div>
+            <div>
+                <pre><code class="php">array(3) {
+  [-2]=&gt;
+  bool(true)
+  [-1]=&gt;
+  bool(true)
+  [0]=&gt;
+  bool(true)
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- <a href="https://wiki.php.net/rfc/negative_array_index">Ссылка на RFC</a> -->
+    </section>
+
+    <section class="slide">
+        <h2>Планы на PHP 8: полезные ссылки 🎓</h2>
+
+        <ul>
+            <li><a href="https://externals.io/message/102415">Чего ждать от PHP 8, пост-обсуждение от Зеева Сураски</a> (<a href="https://habr.com/company/badoo/blog/415359/">перевод на Хабре</a>)</li>
+            <li><a href="https://www.youtube.com/watch?v=dWH65pmnsrI">Видео-бенчмарк, показывающий производительность при использовании JIT</a></li>
+            <li><a href="https://github.com/dstogov/php-tensorflow/blob/master/test_nmist_01.php">Пример FFI — нейросеть на PHP с использованием TensorFlow, распознающая рукописные цифры</a></li>
+            <li><a href="https://github.com/php/php-src/pull/3535">Запрет неявных null-параметров</a> ‼️</li>
+        </ul>
+
+    </section>
+
+    <section class="slide">
+        <h2>Дякую за увагу! 🙏</h2>
+
+        <h4>Для вас занудствовал Алексей П<u>ы</u>льц<u>ы</u>н ✌️</h4>
+
+        <ul class="contacts-list no-bullets">
+            <li>
+                <span class="icon-envelope"></span>
+                <a href="mailto:lex@php.net">lex@php.net</a>
+            </li>
+            <li>
+                <span class="icon-telegram"></span>
+                <a target="_blank" href="https://web.telegram.org/#/im?p=@lexrulezzz">lexrulezzz</a>
+            </li>
+            <li>
+                <span class="icon-github"></span>
+                <a target="_blank" href="https://github.com/lex111"">lex111</a>
+            </li>
+            <li>
+                <span class="icon-medium"></span>
+                <a target="_blank" href="https://medium.com/@lex111">lex111</a>
+            </li>
+        </ul>
+
+        <img src="pictures/qr.png" alt="" class="qr">
+
+        <span class="link-more">
+            <a target="_blank" href="http://lex111.ru/phpdoc-inside-slides/" target="_blank">
+                lex111.ru/php73-slides
+            </a>
+        </span>
     </section>
 
     <footer class="badge">
@@ -204,7 +1053,7 @@
     <div class="progress"></div>
 
     <script src="node_modules/shower-core/shower.min.js"></script>
-    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
-
+    <script src="vendor/highlight.js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

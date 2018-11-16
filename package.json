@@ -27,6 +27,7 @@
     "README.md"
   ],
   "dependencies": {
+    "highlight.js": "^9.13.1",
     "shower-core": "^2.1.0",
     "shower-material": "^2.1.4",
     "shower-ribbon": "^3.1.4"
