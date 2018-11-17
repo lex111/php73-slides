@@ -14,6 +14,9 @@ pre code {
 .slide .shout-medium {
     font-size: 100px;
 }
+.slide p code {
+    margin: 0;
+}
 .slide h2 code {
     font-size: 38px;
     margin: 0;
