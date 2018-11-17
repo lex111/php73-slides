@@ -145,8 +145,6 @@ c
   HELLO WORLD <-- ↘️ вызовёт ошибку из-за этого
 HELLO;
 <mark class="important">Parse error: syntax error, unexpected 'WORLD' (T_STRING) in</mark></code></pre>
-
-        <!-- <a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -161,8 +159,6 @@ foo(<mark>,</mark>); // Parse error
 baz('function', 'bar',<mark>,</mark>); // Parse error
 foo(<mark>,</mark> 'function', 'bar'); // Parse error
 </code></pre>
-
-        <!-- <a href="https://wiki.php.net/rfc/trailing-comma-function-calls">Ссылка на RFC</a> -->
     </section>
 
 <!--
@@ -203,8 +199,6 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 }</code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/json_throw_on_error">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -251,8 +245,6 @@ echo $b;</code></pre>
 ]);</code></pre>
 
         <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00">Черновик по SameSite 🔗</a>
-
-        <!-- <a href="https://wiki.php.net/rfc/same-site-cookie">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -287,6 +279,8 @@ echo $b;</code></pre>
         <h2>Многобайтовые строки</h2>
 
         <p>Добавлена полная поддержка процесса преобразования регистра символа (<i>case-mapping</i>) и процесса создания двух текстов для целей сравнения (<i>case-folding</i>)</p>
+
+        <!-- буква "эсцет" заменяется на две буквы ss -->
 
         <pre><code class="php">echo mb_strtoupper(&quot;Straße&quot;);
 // Ранее — `STRAßE`
@@ -343,8 +337,6 @@ INSERT INTO vocabulary(word) VALUES('jovial')
 }</code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/is-countable">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -367,8 +359,6 @@ foreach ($array as $key => $value) {
 $firstKey = array_key_first();</code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/array_key_first_last">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -386,8 +376,6 @@ $lastKey = array_key_last($arr);
                 </code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/array_key_first_last">Ссылка на RFC</a> -->
 
         <br>
 
@@ -469,8 +457,6 @@ Array
                 <pre><code class="php">preg_match('/[\w.<mark>-</mark>]+/', '');</code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/pcre2-migration">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -490,8 +476,6 @@ $baz = compact('foz'); // ошиблись, вместо `foo` передали 
         </div>
 
         <br>
-
-        <!-- <a href="https://wiki.php.net/rfc/compact">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -510,8 +494,6 @@ $result = constant('current_version'); // 7.3
 <mark class="important">Deprecated: Case-insensitive constants are deprecated. The correct<br>casing for this constant is "CURRENT_VERSION"</mark></code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/case_insensitive_constant_deprecation">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -568,11 +550,6 @@ var_dump(Test::$x, Test2::$x);
 
     </section>
 
-    <!-- <section class="slide">
-        <h2></h2>
-
-    </section> -->
-
     <section class="slide">
         <h2>PHP 7.3: устаревший функционал</h2>
 
@@ -594,11 +571,6 @@ var_dump(strpos($str, 10)); // bool(false)
 
         <a href="https://wiki.php.net/rfc/deprecations_php_7_3#string_search_functions_with_integer_needle">Ссылка на раздел RFC</a>
     </section>
-
-    <!-- <section class="slide">
-        <h2></h2>
-
-    </section> -->
 
     <section class="slide">
         <h2>PHP 7.3: прочие изменения</h2>
@@ -627,11 +599,6 @@ array_push($b, ...$a);
 // В PHP 7.3 такого предупреждения не будет</code></pre>
     </section>
 
-    <!-- <section class="slide">
-        <h2></h2>
-
-    </section> -->
-
     <section class="slide future-php-slide">
         <h2>Полезные ссылки про PHP 7.3 🎓</h2>
 
@@ -645,7 +612,6 @@ array_push($b, ...$a);
 
     <section class="slide">
         <h2 class="shout">А что известно<br>про PHP 7.4?</h2>
-
     </section>
 
     <section class="slide">
@@ -682,6 +648,17 @@ array_push($b, ...$a);
     </section>
 
     <section class="slide">
+        <h2>Типизированные свойства: особенности (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+
+        <p>Продолжение отклонённого RFC в 2016 году</p>
+
+        <ul>
+            <li>Поддерживаются типы для статических свойств</li>
+            <li>Поддерживаются ссылки на типизированные свойства</li>
+        </ul>
+    </section>
+
+    <section class="slide">
         <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <pre style="font-size: 12px;"><code class="php">class Example {
@@ -709,31 +686,17 @@ array_push($b, ...$a);
 
     </section>
 
-    <section class="slide">
-        <h2>Типизированные свойства: особенности (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
-
-        <p>Продолжение отклонённого RFC в 2016 году</p>
-
-        <ul>
-            <li>Поддерживаются типы для статических свойств</li>
-            <li>Поддерживаются ссылки на типизированные свойства</li>
-        </ul>
-
-    </section>
-
-    <section class="slide">
+    <!-- <section class="slide">
         <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <ul>
             <li>Поддерживаются все типы PHP, за исключением `void` и `callable` (из-за зависимости от контекста)</li>
         </ul>
 
-    </section>
+    </section> -->
 
     <section class="slide">
-        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
-
-        <p>Также влияет значение директивы <code>strict_types</code></p>
+        <h2>Типизированные свойства: влияние директивы  <code>strict_types</code> (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <pre style="font-size: 15px;"><code class="php">// file1.php
 declare(strict_types=1);
@@ -749,7 +712,6 @@ $test = new Test;
 $test-&gt;val = &quot;42&quot;;
 var_dump($test-&gt;val); // int(42)
 }</code></pre>
-
     </section>
 
     <section class="slide">
@@ -763,9 +725,9 @@ var_dump($test-&gt;val); // int(42)
     public ?int $c;
 }
 class B extends A {
-    public string $a; // legal, because A::$a is private
-    public ?int $b;   // ILLEGAL
-    public int $c;    // ILLEGAL
+    public string $a; // Верно, потому что `A::$a` — приватный
+    public ?int $b;   // Неверно
+    public int $c;    // Неверно
 }</code></pre>
     </section>
 
@@ -785,7 +747,7 @@ class B extends A {
     <section class="slide">
         <h2>Типизированные свойства: отсутствие значения по умолчанию (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
-        <p style="font-size: 16px;">Обнуляемые типизированные свойства не подразумевают значение <code>null</code> по умолчанию. Вместо этого    такое свойство рассматривается как <u>неинициализированное</u>, и при обращении к нему будет <code>TypeError</code></p>
+        <p style="font-size: 16px;">Обнуляемые типизированные свойства не подразумевают значение <code>null</code> по умолчанию. Вместо этого такое свойство рассматривается как <u>неинициализированное</u>, и при обращении к нему будет <code>TypeError</code></p>
 
         <pre style="font-size: 12px;"><code class="php">class Example {
     public int $val;
@@ -809,7 +771,7 @@ object(Example)#1 (0) {
     <section class="slide">
         <h2>Типизированные свойства: <code>unset()</code> и <code>__get()</code> (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
-        <p style="font-size: 20px;">При чтении из неицициализированного свойства, будет вызываться <code>__get()</code>, при этом возвращаемое им значение должно соответствовать объявленному типу свойства</p>
+        <p style="font-size: 20px;">При чтении из неицициализированного свойства, будет вызываться <code>__get()</code>, при этом возвращаемое значение должно соответствовать объявленному типу свойства</p>
 
         <pre style="font-size: 16px;"><code class="php">class Example {
     public int $val = 42;
@@ -825,7 +787,7 @@ var_dump($example->val); // Обращение к геттеру, как TypeErr
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства: ссылки (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: поддержка ссылок (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p style="font-size: 21px;">Есть возможность получить ссылки на типизированные свойства, при этом есть проверка на запрет изменения значения, если оно не соответсвует заявленному типу</p>
 
@@ -865,8 +827,6 @@ $x = &quot;теперь строка&quot;; // TypeError</code></pre>
         </blockquote>
 
         <p>Может быть использована для загрузки «стандартных» функций, классов, констант</p>
-
-        <!-- <a href="https://wiki.php.net/rfc/preload">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -971,8 +931,6 @@ example(); // Функция example
             <li>Идентификаторы алгоритмы становятся строками, а не числами, как сейчас (но использование констант вроде <code>PASSWORD_BCRYPT</code> по-прежнему будет работать). При этом <code>PASSWORD_DEFAULT</code> равняется <code>null</code></li>
             <li>В целях обратной совместимости, добавлена поддержка целочисленных констант (0-3)</li>
         </ul>
-
-        <!-- <a href="https://wiki.php.net/rfc/password_registry">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -987,8 +945,6 @@ $arr2 = [...$arr1]; // [1, 2, 3]
 $arr3 = [0, ...$arr1]; // [0, 1, 2, 3]
 $arr4 = array(...$arr1, ...$arr2, 111);
 // [1, 2, 3, 1, 2, 3, 111]</code></pre>
-
-        <!-- <a href="https://wiki.php.net/rfc/spread_operator_for_array">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -999,8 +955,6 @@ $arr4 = array(...$arr1, ...$arr2, 111);
             <li value="+">Вследствие этого можно удалить проверки <code>extension_loaded('hash')</code></li>
             <li value="−">Немного станет больше занимать места минимальная сборка PHP</li>
         </ul>
-
-        <!-- <a href="https://wiki.php.net/rfc/permanent_hash_ext">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -1141,8 +1095,6 @@ var_dump($result);</code></pre>
 }</code></pre>
             </div>
         </div>
-
-        <!-- <a href="https://wiki.php.net/rfc/negative_array_index">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
