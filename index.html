@@ -45,7 +45,7 @@
 
         <figure>
             <img class="media media-no-mh" src="pictures/php-versions-packagist.png" alt="">
-            <figcaption><a href="https://blog.packagist.com/php-versions-stats-2018-2-edition/">Источник: packagist.com</a></figcaption>
+            <figcaption><a target="_blank" href="https://blog.packagist.com/php-versions-stats-2018-2-edition/">Источник: packagist.com</a></figcaption>
         </figure>
     </section>
 
@@ -55,7 +55,7 @@
 
         <figure>
             <img class="media media-no-mh" src="pictures/phpvatch.png" alt="" style="width: 80%;">
-            <figcaption><a href="https://xposedornot.com/phpvatch/summary">Источник: xposedornot.com</a></figcaption>
+            <figcaption><a target="_blank" href="https://xposedornot.com/phpvatch/summary">Источник: xposedornot.com</a></figcaption>
         </figure>
     </section>
 
@@ -66,13 +66,13 @@
             <img class="media media-no-mh" src="pictures/releases.png" alt="">
             <img class="media media-no-mh" src="http://php.net/images/supported-versions.php">
 
-            <figcaption><a href="http://php.net/supported-versions.php">Источник: php.net</a></figcaption>
+            <figcaption><a target="_blank" href="http://php.net/supported-versions.php">Источник: php.net</a></figcaption>
         </figure>
     </section>
 
     <section class="slide">
         <h2 class="shout">
-            <a href="https://upgradeyourphp.com/">Обнови свой <br> PHP! 🐘</a>
+            <a target="_blank" href="https://upgradeyourphp.com/">Обнови свой <br> PHP! 🐘</a>
         </h2>
 
     </section>
@@ -82,7 +82,7 @@
     </section>
 
     <section class="slide">
-        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
+        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a target="_blank" href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
 
         <!-- Раньше были строгие правила: - закрывающий идентификатор не должен иметь символов табуляции или пробелов  -->
 
@@ -111,7 +111,7 @@ HTML;}</code></pre>
     </section>
 
     <section class="slide">
-        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
+        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a target="_blank" href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
 
         <div class="columns two">
             <div>
@@ -137,7 +137,7 @@ c
     </section>
 
     <section class="slide">
-        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
+        <h2>Гибкий синтаксис Nowdoc и Heredoc (<a target="_blank" href="https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes">RFC</a>)</h2>
 
         <pre><code class="php">$str = &lt;&lt;&lt;HELLO
   HELLO_WORLD
@@ -148,7 +148,7 @@ HELLO;
     </section>
 
     <section class="slide">
-        <h2>Поддержка завершающих запятых в списке аргументов при вызове функций (<a href="https://wiki.php.net/rfc/trailing-comma-function-calls">RFC</a>)</h2>
+        <h2>Поддержка завершающих запятых в списке аргументов при вызове функций (<a target="_blank" href="https://wiki.php.net/rfc/trailing-comma-function-calls">RFC</a>)</h2>
 
         <pre><code class="php">$newArray = array_merge(
   $arrayOne,
@@ -177,7 +177,7 @@ foo(<mark>,</mark> 'function', 'bar'); // Parse error
  -->
 
     <section class="slide">
-        <h2>Исключения при работе с JSON (<a href="https://wiki.php.net/rfc/json_throw_on_error">RFC</a>)</h2>
+        <h2>Исключения при работе с JSON (<a target="_blank" href="https://wiki.php.net/rfc/json_throw_on_error">RFC</a>)</h2>
 
         <!-- проблема - обе возвращают null при ошибке -->
 
@@ -202,7 +202,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     </section>
 
     <section class="slide">
-        <h2>Присваивание по ссылкам в list (<a href="https://wiki.php.net/rfc/list_reference_assignment">RFC</a>)</h2>
+        <h2>Присваивание по ссылкам в list (<a target="_blank" href="https://wiki.php.net/rfc/list_reference_assignment">RFC</a>)</h2>
 
         <div>
             <pre><code class="php">$arr = [1, 2]; // [] - сокращенная форма list (c PHP 7.1)
@@ -220,11 +220,11 @@ echo $b;</code></pre>
             ➕ Работает также с вложенными списками
         </p>
 
-        <!-- <a href="https://wiki.php.net/rfc/list_reference_assignment">Ссылка на RFC</a> -->
+        <!-- <a target="_blank" href="https://wiki.php.net/rfc/list_reference_assignment">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
-        <h2>Cookies с атрибутом SameSite (<a href="https://wiki.php.net/rfc/same-site-cookie">RFC</a>)</h2>
+        <h2>Cookies с атрибутом SameSite (<a target="_blank" href="https://wiki.php.net/rfc/same-site-cookie">RFC</a>)</h2>
 
         <ul>
             <li>В функциях <code>setcookie()</code>, <code>setrawcookie()</code>, <code>session_set_cookie_params()</code> атрибут задаётся через массив опций</li>
@@ -236,7 +236,7 @@ echo $b;</code></pre>
          <!-- cookie не нужно передавать, если запрос идет с сайта, отличного от того, на котором cookie была установлена -->
         <!-- strict - приложение не будет отправлять куки ни на один запрос с другого ресурса -->
         <!-- lax - куки передают запросам через безопасные методы - GET, HEAD, OPTIONS и TRACE -->
-        <!-- <a href="https://habr.com/post/334856/">Конец CSRF близок?</a> -->
+        <!-- <a target="_blank" href="https://habr.com/post/334856/">Конец CSRF близок?</a> -->
 
         <pre><code class="php">setcookie('cookie_name', 'cookie_value', [
     'expire' =&gt; strtotime('+7 days'),
@@ -244,11 +244,11 @@ echo $b;</code></pre>
     // Поддерживаются и другие - "lifetime", "path", "domain", "secure", "httponly"
 ]);</code></pre>
 
-        <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00">Черновик по SameSite 🔗</a>
+        <a target="_blank" href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00">Черновик по SameSite 🔗</a>
     </section>
 
     <section class="slide">
-        <h2>Добавление поддержки Argon2id (<a href="https://wiki.php.net/rfc/argon2_password_hash_enhancements">RFC</a>)</h2>
+        <h2>Добавление поддержки Argon2id (<a target="_blank" href="https://wiki.php.net/rfc/argon2_password_hash_enhancements">RFC</a>)</h2>
 
         <ul>
             <li>Есть три разных варианта: Argon2i (уже реализован), Argon2d и Argon2id</li>
@@ -262,7 +262,7 @@ echo $b;</code></pre>
 
         <p>➕  Поддерживает те же самые опции, что и Argon2i: <code>memory_cost</code>, <code>time_cost</code>, <code>threads</code></p>
 
-        <!-- <a href="https://wiki.php.net/rfc/argon2_password_hash_enhancements">Ссылка на RFC</a> -->
+        <!-- <a target="_blank" href="https://wiki.php.net/rfc/argon2_password_hash_enhancements">Ссылка на RFC</a> -->
     </section>
 
     <section class="slide">
@@ -286,7 +286,7 @@ echo $b;</code></pre>
 // Ранее — `STRAßE`
 // С PHP 7.3 — `STRASSE`</code></pre>
 
-        <a href="https://www.w3.org/TR/charmod-norm/#definitionCaseFolding">Подробнее можно узнать здесь 🔗</a>
+        <a target="_blank" href="https://www.w3.org/TR/charmod-norm/#definitionCaseFolding">Подробнее можно узнать здесь 🔗</a>
     </section>
 
     <section class="slide">
@@ -323,7 +323,7 @@ INSERT INTO vocabulary(word) VALUES('jovial')
     </section>
 
     <section class="slide">
-        <h2>Новая функция <code>is_countable()</code> (<a href="https://wiki.php.net/rfc/is-countable">RFC</a>)</h2>
+        <h2>Новая функция <code>is_countable()</code> (<a target="_blank" href="https://wiki.php.net/rfc/is-countable">RFC</a>)</h2>
 
         <div class="columns two compare-columns compare-columns-row">
             <div>
@@ -340,7 +340,7 @@ INSERT INTO vocabulary(word) VALUES('jovial')
     </section>
 
     <section class="slide">
-        <h2>Новая функция <code>array_key_first()</code> (<a href="https://wiki.php.net/rfc/array_key_first_last">RFC</a>)</h2>
+        <h2>Новая функция <code>array_key_first()</code> (<a target="_blank" href="https://wiki.php.net/rfc/array_key_first_last">RFC</a>)</h2>
 
         <div class="columns two compare-columns">
             <div>
@@ -362,7 +362,7 @@ $firstKey = array_key_first();</code></pre>
     </section>
 
     <section class="slide">
-        <h2>Новая функция <code>array_key_last()</code> (<a href="https://wiki.php.net/rfc/array_key_first_last">RFC</a>)</h2>
+        <h2>Новая функция <code>array_key_last()</code> (<a target="_blank" href="https://wiki.php.net/rfc/array_key_first_last">RFC</a>)</h2>
 
         <div class="columns two compare-columns">
             <div>
@@ -407,7 +407,7 @@ Array
 )
 */</code></pre>
 
-        <a href="https://www.softwariness.com/articles/monotonic-clocks-windows-and-posix/">Монотонные часы — правильный способ определять прошедшее время 🔗</a>
+        <a target="_blank" href="https://www.softwariness.com/articles/monotonic-clocks-windows-and-posix/">Монотонные часы — правильный способ определять прошедшее время 🔗</a>
     </section>
 
     <section class="slide">
@@ -425,7 +425,7 @@ Array
         <h2>Новые функция <code>net_get_interfaces()</code></h2>
 
         <p>Возвращает массив всех сетевых интерфейсов</p>
-        <p>Пока нет в документации, вся информация в <a href="https://github.com/php/php-src/pull/2935">пулреквесте</a></p>
+        <p>Пока нет в документации, вся информация в <a target="_blank" href="https://github.com/php/php-src/pull/2935">пулреквесте</a></p>
     </section>
 
     <section class="slide">
@@ -436,7 +436,7 @@ Array
         <h2>Миграция на с PCRE (8) на PCRE2 (10.x)</h2>
 
         <ul>
-            <li><a href="http://php.net/reference.pcre.pattern.modifiers">Модификатор S</a> включен по умолчанию</li>
+            <li><a target="_blank" href="http://php.net/reference.pcre.pattern.modifiers">Модификатор S</a> включен по умолчанию</li>
             <li>Опция X отключена по умолчанию</li>
             <li>Используется Юникод десятой версии (как одно из обновлений — станет ещё больше эмодзи 😃)</li>
             <li>Некоторые паттерны регулярных выражений могут быть перестать работать ⚠️</li>
@@ -444,7 +444,7 @@ Array
     </section>
 
     <section class="slide">
-        <h2>Миграция на PCRE2 (<a href="https://wiki.php.net/rfc/pcre2-migration">RFC</a>)</h2>
+        <h2>Миграция на PCRE2 (<a target="_blank" href="https://wiki.php.net/rfc/pcre2-migration">RFC</a>)</h2>
 
         <p>Пример регулярного выражения, которое не будет работать в PHP 7.3, и как это исправить</p>
 
@@ -460,7 +460,7 @@ Array
     </section>
 
     <section class="slide">
-        <h2>Уведомление о неопределённых переменных в <code>compact()</code> (<a href="https://wiki.php.net/rfc/compact">RFC</a>)</h2>
+        <h2>Уведомление о неопределённых переменных в <code>compact()</code> (<a target="_blank" href="https://wiki.php.net/rfc/compact">RFC</a>)</h2>
 
         <div class="columns two compare-columns compare-columns-row">
             <div>
@@ -479,7 +479,7 @@ $baz = compact('foz'); // ошиблись, вместо `foo` передали 
     </section>
 
     <section class="slide">
-        <h2>Объявление и использование регистронезависимых констант (<a href="https://wiki.php.net/rfc/case_insensitive_constant_deprecation">RFC</a>)</h2>
+        <h2>Объявление и использование регистронезависимых констант (<a target="_blank" href="https://wiki.php.net/rfc/case_insensitive_constant_deprecation">RFC</a>)</h2>
 
         <div class="columns two compare-columns compare-columns-row">
             <div>
@@ -554,9 +554,9 @@ var_dump(Test::$x, Test2::$x);
         <h2>PHP 7.3: устаревший функционал</h2>
 
         <ul>
-            <li><a href="https://wiki.php.net/rfc/deprecations_php_7_3#undocumented_mbstring_function_aliases">Удаление недокументированных псевдонимов функций mbstring (например, <code>mbereg</code> вместо <code>mb_ereg</code>)</a></li>
-            <li><a href="https://wiki.php.net/rfc/deprecations_php_7_3#fgetss_function_and_stringstrip_tags_filter">Объявление устаревшими функций <code>fgetss()</code>, <code>gzgetss()</code> и <code>SplFileObject::fgetss()</code>, а также потока <code>string.strip_tags</code></a></li>
-            <li><a href="https://wiki.php.net/rfc/deprecations_php_7_3#filter_flag_scheme_required_and_filter_flag_host_required">Объявление устаревшим использование флагов фильтра <code>FILTER_FLAG_SCHEME_REQUIRED</code> и <code>FILTER_FLAG_HOST_REQUIRED</code></a> из-за наличия <code>FILTER_VALIDATE_URL</code></li>
+            <li><a target="_blank" href="https://wiki.php.net/rfc/deprecations_php_7_3#undocumented_mbstring_function_aliases">Удаление недокументированных псевдонимов функций mbstring (например, <code>mbereg</code> вместо <code>mb_ereg</code>)</a></li>
+            <li><a target="_blank" href="https://wiki.php.net/rfc/deprecations_php_7_3#fgetss_function_and_stringstrip_tags_filter">Объявление устаревшими функций <code>fgetss()</code>, <code>gzgetss()</code> и <code>SplFileObject::fgetss()</code>, а также потока <code>string.strip_tags</code></a></li>
+            <li><a target="_blank" href="https://wiki.php.net/rfc/deprecations_php_7_3#filter_flag_scheme_required_and_filter_flag_host_required">Объявление устаревшим использование флагов фильтра <code>FILTER_FLAG_SCHEME_REQUIRED</code> и <code>FILTER_FLAG_HOST_REQUIRED</code></a> из-за наличия <code>FILTER_VALIDATE_URL</code></li>
             <li>Объявлено устаревшей функции <code>image2wbmp()</code> в пользу <code>imagewbmp()</code></li>
         </ul>
     </section>
@@ -569,7 +569,7 @@ var_dump(strpos($str, &quot;10&quot;)); // int(10)
 var_dump(strpos($str, 10)); // bool(false)
 <mark class="important">Deprecated: strpos(): Non-string needles will be interpreted as<br>strings in the future. Use an explicit chr() call to preserve the<br>current behavior</mark></code></pre>
 
-        <a href="https://wiki.php.net/rfc/deprecations_php_7_3#string_search_functions_with_integer_needle">Ссылка на раздел RFC</a>
+        <a target="_blank" href="https://wiki.php.net/rfc/deprecations_php_7_3#string_search_functions_with_integer_needle">Ссылка на раздел RFC</a>
     </section>
 
     <section class="slide">
@@ -603,10 +603,10 @@ array_push($b, ...$a);
         <h2>Полезные ссылки про PHP 7.3 🎓</h2>
 
         <ul>
-            <li><a href="https://github.com/php/php-src/blob/PHP-7.3/NEWS">Список всех изменений</a></li>
-            <li><a href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING">Примечания к обновлению</a></li>
-            <li><a href="https://symfony.com/doc/current/components/polyfill_php73.html">Полифил для PHP 7.3 (новые функции)</a></li>
-            <li><a href="https://wiki.php.net/todo/php73">Расписание выхода релизов PHP 7.3</a></li>
+            <li><a target="_blank" href="https://github.com/php/php-src/blob/PHP-7.3/NEWS">Список всех изменений</a></li>
+            <li><a target="_blank" href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING">Примечания к обновлению</a></li>
+            <li><a target="_blank" href="https://symfony.com/doc/current/components/polyfill_php73.html">Полифил для PHP 7.3 (новые функции)</a></li>
+            <li><a target="_blank" href="https://wiki.php.net/todo/php73">Расписание выхода релизов PHP 7.3</a></li>
         </ul>
     </section>
 
@@ -615,7 +615,7 @@ array_push($b, ...$a);
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <div class="columns two compare-columns">
             <div>
@@ -648,7 +648,7 @@ array_push($b, ...$a);
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства: особенности (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: особенности (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p>Продолжение отклонённого RFC в 2016 году</p>
 
@@ -659,7 +659,7 @@ array_push($b, ...$a);
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <pre style="font-size: 12px;"><code class="php">class Example {
     // Поддерживаются все типы, за исключением &quot;void&quot; и &quot;callable&quot;
@@ -687,7 +687,7 @@ array_push($b, ...$a);
     </section>
 
     <!-- <section class="slide">
-        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <ul>
             <li>Поддерживаются все типы PHP, за исключением `void` и `callable` (из-за зависимости от контекста)</li>
@@ -696,7 +696,7 @@ array_push($b, ...$a);
     </section> -->
 
     <section class="slide">
-        <h2>Типизированные свойства: влияние директивы  <code>strict_types</code> (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: влияние директивы  <code>strict_types</code> (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <pre style="font-size: 15px;"><code class="php">// file1.php
 declare(strict_types=1);
@@ -715,7 +715,7 @@ var_dump($test-&gt;val); // int(42)
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p>Типы свойств инварианты: неприватные свойства не могут изменять объявление типа во время наследования</p>
 
@@ -732,7 +732,7 @@ class B extends A {
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства: значения по умолчанию (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: значения по умолчанию (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p>Типизированные свойства не могут иметь <code>null</code> в качестве значения по умолчанию,
         пока тип <strong>явно</strong> не объявлен как обнуляемый (т.е. <code><mark>?</mark>string</code></p>
@@ -745,7 +745,7 @@ class B extends A {
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства: отсутствие значения по умолчанию (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: отсутствие значения по умолчанию (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p style="font-size: 16px;">Обнуляемые типизированные свойства не подразумевают значение <code>null</code> по умолчанию. Вместо этого такое свойство рассматривается как <u>неинициализированное</u>, и при обращении к нему будет <code>TypeError</code></p>
 
@@ -769,7 +769,7 @@ object(Example)#1 (0) {
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства: <code>unset()</code> и <code>__get()</code> (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: <code>unset()</code> и <code>__get()</code> (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p style="font-size: 20px;">При чтении из неицициализированного свойства, будет вызываться <code>__get()</code>, при этом возвращаемое значение должно соответствовать объявленному типу свойства</p>
 
@@ -787,7 +787,7 @@ var_dump($example->val); // Обращение к геттеру, как TypeErr
     </section>
 
     <section class="slide">
-        <h2>Типизированные свойства: поддержка ссылок (<a href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
+        <h2>Типизированные свойства: поддержка ссылок (<a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">RFC</a>)</h2>
 
         <p style="font-size: 21px;">Есть возможность получить ссылки на типизированные свойства, при этом есть проверка на запрет изменения значения, если оно не соответсвует заявленному типу</p>
 
@@ -806,17 +806,17 @@ $x = &quot;теперь строка&quot;; // TypeError</code></pre>
         <h2>Типизированные свойства: полезные ссылки 🎓</h2>
 
         <ul>
-            <li><a href="https://wiki.php.net/rfc/typed_properties_v2">Все подробности реализации в RFC</a></li>
-            <li><a href="https://www.sammyk.me/how-to-compile-an-unreleased-rfc-feature-for-php-source-php-internals">Инструкция по компиляции PHP с типизированными свойствами</a></li>
-            <li><a href="https://externals.io/message/102333">Обсуждение этой возможности</a></li>
-            <li><a href="https://github.com/php/php-src/pull/3313">Пулреквест с типизированными свойствами</a></li>
-            <li><a href="https://gist.github.com/dstogov/b9fc0fdccfb8bf7bae121ce3d3ff1db1">Бенчмарк (приложения становятся медленеее на 1%, в худшем случае - на 6%)</a></li>
-            <li><a href="https://github.com/dunglas/phpdoc-to-typehint">CLI-инструмент по автоматическому добавлению типов из докблоков (возможно будет добавлена поддержка типизированных свойств)</a></li>
+            <li><a target="_blank" href="https://wiki.php.net/rfc/typed_properties_v2">Все подробности реализации в RFC</a></li>
+            <li><a target="_blank" href="https://www.sammyk.me/how-to-compile-an-unreleased-rfc-feature-for-php-source-php-internals">Инструкция по компиляции PHP с типизированными свойствами</a></li>
+            <li><a target="_blank" href="https://externals.io/message/102333">Обсуждение этой возможности</a></li>
+            <li><a target="_blank" href="https://github.com/php/php-src/pull/3313">Пулреквест с типизированными свойствами</a></li>
+            <li><a target="_blank" href="https://gist.github.com/dstogov/b9fc0fdccfb8bf7bae121ce3d3ff1db1">Бенчмарк (приложения становятся медленеее на 1%, в худшем случае - на 6%)</a></li>
+            <li><a target="_blank" href="https://github.com/dunglas/phpdoc-to-typehint">CLI-инструмент по автоматическому добавлению типов из докблоков (возможно будет добавлена поддержка типизированных свойств)</a></li>
         </ul>
     </section>
 
     <section class="slide">
-        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+        <h2>Предварительная загрузка (<a target="_blank" href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
 
         <mark>14 ноября принято в PHP 7.4</mark>
 
@@ -830,7 +830,7 @@ $x = &quot;теперь строка&quot;; // TypeError</code></pre>
     </section>
 
     <section class="slide">
-        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+        <h2>Предварительная загрузка (<a target="_blank" href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
 
         <ul>
             <li value="+">Реализована как часть Opcache, файл с предзагрузкой указывается в опции <code>opcache.preload</code></li>
@@ -844,7 +844,7 @@ $x = &quot;теперь строка&quot;; // TypeError</code></pre>
     </section>
 
     <section class="slide">
-        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+        <h2>Предварительная загрузка (<a target="_blank" href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
 
          <div class="columns two">
              <div>
@@ -873,7 +873,7 @@ $x = &quot;теперь строка&quot;; // TypeError</code></pre>
     </section>
 
     <section class="slide">
-        <h2>Предварительная загрузка (<a href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
+        <h2>Предварительная загрузка (<a target="_blank" href="https://wiki.php.net/rfc/preload">RFC</a>)</h2>
 
         <pre><code class="bash">php <mark>-d opcache.preload=preload.php</mark> test.php</code></pre>
 
@@ -923,7 +923,7 @@ example(); // Функция example
     </section>
 
     <section class="slide">
-        <h2>Реестр хеширования пароля (<a href="https://wiki.php.net/rfc/password_registry">RFC</a>)</h2>
+        <h2>Реестр хеширования пароля (<a target="_blank" href="https://wiki.php.net/rfc/password_registry">RFC</a>)</h2>
 
         <ul>
             <li>Возможность расширений регистрировать свои алгоритмы хеширования паролей</li>
@@ -934,7 +934,7 @@ example(); // Функция example
     </section>
 
     <section class="slide">
-        <h2>Оператор расширения в массиве (<a href="https://wiki.php.net/rfc/spread_operator_for_array">RFC</a>) ❓</h2>
+        <h2>Оператор расширения в массиве (<a target="_blank" href="https://wiki.php.net/rfc/spread_operator_for_array">RFC</a>) ❓</h2>
 
         <pre><code class="php">$parts = ['apple', 'pear'];
 $fruits = ['banana', 'orange', ...$parts, 'watermelon'];
@@ -948,7 +948,7 @@ $arr4 = array(...$arr1, ...$arr2, 111);
     </section>
 
     <section class="slide">
-        <h2>Расширение hash — часть ядра (<a href="https://wiki.php.net/rfc/permanent_hash_ext">RFC</a>)</h2>
+        <h2>Расширение hash — часть ядра (<a target="_blank" href="https://wiki.php.net/rfc/permanent_hash_ext">RFC</a>)</h2>
 
         <ul>
             <li>Теперь оно будет всегда доступно и не может быть отключено</li>
@@ -961,8 +961,8 @@ $arr4 = array(...$arr1, ...$arr2, 111);
         <h2>PHP 7.4: остальные изменения</h2>
 
         <ul>
-            <li>Выбрасывание исключения в <code>openssl_random_pseudo_bytes()</code> и удаление второго параметра (в PHP 8.0) — <a href="https://wiki.php.net/rfc/improve-openssl-random-pseudo-bytes">RFC</a></li>
-            <li>Включение по умолчанию опции <code>session.use_strict_mode</code> — <a href="https://wiki.php.net/rfc/default-session-strict-mode">RFC</a> ❓</li>
+            <li>Выбрасывание исключения в <code>openssl_random_pseudo_bytes()</code> и удаление второго параметра (в PHP 8.0) — <a target="_blank" href="https://wiki.php.net/rfc/improve-openssl-random-pseudo-bytes">RFC</a></li>
+            <li>Включение по умолчанию опции <code>session.use_strict_mode</code> — <a target="_blank" href="https://wiki.php.net/rfc/default-session-strict-mode">RFC</a> ❓</li>
             <li>Для работы расширения SQLite3 потребуется libsqlite версии 3.5.0 или новее (ранее могла использоваться библиотека, включённая в сборку, теперь она была убрана из ядра)</li>
             <li>Для работы расширения intl требуется ICU 50.1 или новее</li>
             <li>Добавлены новые константы в Tidy для элементов HTML5</li>
@@ -993,16 +993,16 @@ $arr4 = array(...$arr1, ...$arr2, 111);
             <li>Унификация порядка аргументов в <code>implode()</code> (в соответствии с <code>explode()</code></li>
         </ul>
 
-        <a href="https://wiki.php.net/rfc/deprecations_php_7_4">Полный список в RFC</a>
+        <a target="_blank" href="https://wiki.php.net/rfc/deprecations_php_7_4">Полный список в RFC</a>
     </section>
 
     <section class="slide future-php-slide">
         <h2>Полезные ссылки про PHP 7.4 🎓</h2>
 
         <ul>
-            <li><a href="https://github.com/php/php-src/blob/master/NEWS">Все изменения</a></li>
-            <li><a href="https://github.com/php/php-src/blob/master/UPGRADING">Примечания при обновлении</a></li>
-            <li><a href="https://github.com/devilbox/docker-php-fpm-7.4">Docker-образ с PHP 7.4 (на данный момент master-ветка PHP)</a></li>
+            <li><a target="_blank" href="https://github.com/php/php-src/blob/master/NEWS">Все изменения</a></li>
+            <li><a target="_blank" href="https://github.com/php/php-src/blob/master/UPGRADING">Примечания при обновлении</a></li>
+            <li><a target="_blank" href="https://github.com/devilbox/docker-php-fpm-7.4">Docker-образ с PHP 7.4 (на данный момент master-ветка PHP)</a></li>
         </ul>
     </section>
 
@@ -1010,7 +1010,7 @@ $arr4 = array(...$arr1, ...$arr2, 111);
         <figure>
             <img src="pictures/future_php.png" class="cover" alt="">
             <figcaption class="copyright">
-                <a href="http://zsuraski.blogspot.com/2018/10/the-future-of-zend-engine-and-zend.html"> zsuraski.blogspot.com</a>
+                <a target="_blank" href="http://zsuraski.blogspot.com/2018/10/the-future-of-zend-engine-and-zend.html"> zsuraski.blogspot.com</a>
             </figcaption>
         </figure>
     </section>
@@ -1020,16 +1020,16 @@ $arr4 = array(...$arr1, ...$arr2, 111);
 
         <p>Спойлер — всё будет хорошо!</p>
 
-        <p>PHP — опенсорс-проект, и благодаря его <a href="http://www.zend.com/license/2_00.txt">«либеральной лицензии»</a>, нет никакого риска, что это изменится. Вкратце, никто — ни коммерческая компания или кто-либо ещё — не может «закрыть PHP» или начать взимать с него деньги</p>
+        <p>PHP — опенсорс-проект, и благодаря его <a target="_blank" href="http://www.zend.com/license/2_00.txt">«либеральной лицензии»</a>, нет никакого риска, что это изменится. Вкратце, никто — ни коммерческая компания или кто-либо ещё — не может «закрыть PHP» или начать взимать с него деньги</p>
 
         <ul>
-            <li><a href="https://externals.io/message/88702">Больше подробностей в обсуждении</a></li>
+            <li><a target="_blank" href="https://externals.io/message/88702">Больше подробностей в обсуждении</a></li>
         </ul>
 
         <figure>
             <img src="pictures/future_php.png" class="cover cover-blurred" alt="">
             <figcaption class="copyright">
-                <a href="http://zsuraski.blogspot.com/2018/10/the-future-of-zend-engine-and-zend.html"> zsuraski.blogspot.com</a>
+                <a target="_blank" href="http://zsuraski.blogspot.com/2018/10/the-future-of-zend-engine-and-zend.html"> zsuraski.blogspot.com</a>
             </figcaption>
         </figure>
 
@@ -1045,9 +1045,9 @@ $arr4 = array(...$arr1, ...$arr2, 111);
         <p>Ориентировочно середина-конец 2020 года</p>
 
         <ul>
-            <li>Полнофункциональный <a href="https://externals.io/message/95531">JIT</a> для ускорения на интенсивных рабочих нагрузок <i>(на обычных прирост несущественен)</i></li>
+            <li>Полнофункциональный <a target="_blank" href="https://externals.io/message/95531">JIT</a> для ускорения на интенсивных рабочих нагрузок <i>(на обычных прирост несущественен)</i></li>
             <li>OPcache станет частью ядра вместо отдельного расширения</li>
-            <li><a href="https://github.com/dstogov/php-ffi">FFI (Foreign Function Interface</a>), позволяющий PHP взаимодействовать с нативными библиотеками кода на С или С++ без необходимости написания расширения</li>
+            <li><a target="_blank" href="https://github.com/dstogov/php-ffi">FFI (Foreign Function Interface</a>), позволяющий PHP взаимодействовать с нативными библиотеками кода на С или С++ без необходимости написания расширения</li>
             <li>Улучшенная поддержка асинхронности: больше поддержки асинхронного ввода-вывода в различных расширениях и потоках</li>
         </ul>
     </section>
@@ -1068,7 +1068,7 @@ $arr4 = array(...$arr1, ...$arr2, 111);
     </section>
 
     <section class="slide">
-        <h2>Массивы, начинающиеся с отрицательного индекса (<a href="https://wiki.php.net/rfc/negative_array_index">RFC</a>)</h2>
+        <h2>Массивы, начинающиеся с отрицательного индекса (<a target="_blank" href="https://wiki.php.net/rfc/negative_array_index">RFC</a>)</h2>
 
         <pre><code class="php">$result = [-2 =&gt; true, true, true];
 var_dump($result);</code></pre>
@@ -1101,10 +1101,10 @@ var_dump($result);</code></pre>
         <h2>Планы на PHP 8: полезные ссылки 🎓</h2>
 
         <ul>
-            <li><a href="https://externals.io/message/102415">Чего ждать от PHP 8, пост-обсуждение от Зеева Сураски</a> (<a href="https://habr.com/company/badoo/blog/415359/">перевод на Хабре</a>)</li>
-            <li><a href="https://www.youtube.com/watch?v=dWH65pmnsrI">Видео-бенчмарк, показывающий производительность при использовании JIT</a></li>
-            <li><a href="https://github.com/dstogov/php-tensorflow/blob/master/test_nmist_01.php">Пример FFI — нейросеть на PHP с использованием TensorFlow, распознающая рукописные цифры</a></li>
-            <li><a href="https://github.com/php/php-src/pull/3535">Запрет неявных null-параметров</a> ‼️</li>
+            <li><a target="_blank" href="https://externals.io/message/102415">Чего ждать от PHP 8, пост-обсуждение от Зеева Сураски</a> (<a target="_blank" href="https://habr.com/company/badoo/blog/415359/">перевод на Хабре</a>)</li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=dWH65pmnsrI">Видео-бенчмарк, показывающий производительность при использовании JIT</a></li>
+            <li><a target="_blank" href="https://github.com/dstogov/php-tensorflow/blob/master/test_nmist_01.php">Пример FFI — нейросеть на PHP с использованием TensorFlow, распознающая рукописные цифры</a></li>
+            <li><a target="_blank" href="https://github.com/php/php-src/pull/3535">Запрет неявных null-параметров</a> ‼️</li>
         </ul>
 
     </section>
@@ -1117,7 +1117,7 @@ var_dump($result);</code></pre>
         <ul class="contacts-list no-bullets">
             <li>
                 <span class="icon-envelope"></span>
-                <a href="mailto:lex@php.net">lex@php.net</a>
+                <a target="_blank" href="mailto:lex@php.net">lex@php.net</a>
             </li>
             <li>
                 <span class="icon-telegram"></span>
@@ -1143,7 +1143,7 @@ var_dump($result);</code></pre>
     </section>
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+        <a target="_blank" href="https://github.com/shower/shower">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
